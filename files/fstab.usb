@@ -1,0 +1,4 @@
+
+/dev/block/sda2	/system		ext4	ro							wait
+/dev/block/sda3	/data		ext4	noatime,nosuid,nodev,nomblk_io_submit,errors=panic	wait
+# /dev/block/mmcblk0p4	/cache		ext4	noatime,nosuid,nodev,nomblk_io_submit,errors=panic	wait

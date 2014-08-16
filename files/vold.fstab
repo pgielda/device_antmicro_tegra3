@@ -1,0 +1,2 @@
+dev_mount udisk /mnt/usb auto /sys/devices/amba.0/e0002000.usb/xusbps-ehci.0/usb1
+ 
