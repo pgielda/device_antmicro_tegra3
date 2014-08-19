@@ -55,6 +55,32 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # turn off power collapse
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.ril.disable.power.collapse=0
+        
+# OpenGL settings
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.opengles.version=131072 \
+	ro.zygote.disable_gl_preload=true
+
+# prevent screen flickering
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.hwui.render_dirty_regions=false
+
+# GPU producer to CPU consumer not supported
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.bq.gpu_to_cpu_unsupported=1
+
+# Render UI with GPU
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.sf.hw=1 \
+	debug.composition.type=gpu
+
+# Faster boot.
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.hw_quickpoweron=true
+
+# Enable Low Ram Device flag
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.low_ram=true
 
 DEVICE_PACKAGE_OVERLAYS := \
         device/generic/armv7-a-neon/overlay \
