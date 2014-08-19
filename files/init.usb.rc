@@ -51,6 +51,7 @@ on post-fs-data
 on boot
    start consoledown
    start wakepoke
+   start vendor
 
 service consoledown /hide_cursor.sh
 	user root
@@ -60,7 +61,11 @@ service consoledown /hide_cursor.sh
 service wakepoke /sbin/uinput
 	user root
 	group root
-
+	
+service vendor /system/vendor/vendor.sh
+	user root
+	group root
+	oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -e/data/misc/wifi/entropy.bin
