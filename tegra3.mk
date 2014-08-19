@@ -92,6 +92,7 @@ PRODUCT_CHARACTERISTICS := tablet,nosdcard
 PRODUCT_COPY_FILES := \
 	device/antmicro/tegra3/files/init.usb.rc:root/init.usb.rc \
         device/antmicro/tegra3/files/fstab.usb:root/fstab.usb \
+        device/antmicro/tegra3/files/uevent.rc:root/uevent.rc \
 	device/antmicro/tegra3/files/vold.fstab:system/etc/vold.fstab \
 	device/antmicro/tegra3/files/hide_cursor.sh:root/hide_cursor.sh \
 	device/antmicro/tegra3/files/init:root/sbin/init \
